@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "a299e951-465e-4bde-ae1b-39fc7136a87e",
+		"name": "AssetTrackerSIT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddUpdateBook",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM0IiwibmJmIjoxNjUxNDkzNDQwLCJleHAiOjE2NTE1MzY2NDAsImlzcyI6InZyaW5kYXZhbiIsImF1ZCI6InZyaW5kYXZhbiJ9.UOd5oRlkQoCNJuRFDpSi6RVoCmcHSJntRKYoNcOktKTO_QcZYhzFtbMPQuyT1KYls95PTyHoCtG6dMUUN99rjEjUCEo2AHja6evqOB7rIAi4wyAxp-FA3MfWsAeyq2VNF23midsntsg4DW1TZOPJJ3p0bCIkMbONAWDfpreC_U_Zmp8R7bq_gxcRdM7BB9yEBq4XIjzG6I_Twr_CKixygZGcilFL-bTAYUD3VcMLzEKcRqWEAu8kmEopSrLW6u9IV7CikZqZUJ66iXlVGt18hj9vKOC1jo0ZIbJgWMrV9Lm3L5N9ClSe5upw2cLu2767tqecKMQq6uyHxRHOBU52AZLFAD7yWF80zUnhz2QCGeGRHEHKTJtL-GNZhegLBm5YB4B8brmec1r9uc34iV6gMGSnJL1QfCjAqBs-RdlsfnYeVB_BNsMkdRRc3NgRCSI0OqchNdUf3TdQ0TRcMdgdNLbAP1rlWkfz_R-Ie-HfGgypLERZ0SMjK2WqCHv9eaOIQV-Uk-L4fi4ZTz7DgOZiyCJ5yQQ_J6jP6p-JPvZKBi7fapqaqlcb9CYs9IeIFWT4ETGEp7s3zMwKEHMWMCyFs_KTuUWQStrs-FwU3dRmwd6O1yN7DE_FTBB0n75ihWnJZHV0Zcz-IFyAUeVlB5rDGVad_Hxo-xcxwsWPBkLiRQc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Title",
+							"value": "Autobiography Of A Yogi11",
+							"type": "text"
+						},
+						{
+							"key": "ISBN10",
+							"value": "1234567890",
+							"type": "text"
+						},
+						{
+							"key": "ISBN13",
+							"value": "1234567890123",
+							"type": "text"
+						},
+						{
+							"key": "RFID",
+							"value": "E2801190200077BCB26B0308",
+							"type": "text"
+						},
+						{
+							"key": "Edition",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "Author",
+							"value": "Ruskin Bond",
+							"type": "text"
+						},
+						{
+							"key": "Publisher",
+							"value": "Penguin Books",
+							"type": "text"
+						},
+						{
+							"key": "DateOfPublication",
+							"value": "2000",
+							"type": "text"
+						},
+						{
+							"key": "PageCount",
+							"value": "201",
+							"type": "text"
+						},
+						{
+							"key": "Tags",
+							"value": "Fiction",
+							"type": "text"
+						},
+						{
+							"key": "Language",
+							"value": "English",
+							"type": "text"
+						},
+						{
+							"key": "Description",
+							"value": "Yogi",
+							"type": "text"
+						},
+						{
+							"key": "Category",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "SubCategory",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "Location",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "PhotoPath",
+							"value": "646de058-0a30-4434-a041-38c15b627af8.jpeg",
+							"type": "text"
+						},
+						{
+							"key": "ImageChanged",
+							"value": " true",
+							"type": "text"
+						},
+						{
+							"key": "BookImage",
+							"type": "file",
+							"src": "/C:/Users/amit.dhavale/Downloads/one.png"
+						},
+						{
+							"key": "AssetID",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sit.jiotags.jvts.net/AssetTracker/api/BookCatalogue/AddBook",
+					"protocol": "https",
+					"host": [
+						"sit",
+						"jiotags",
+						"jvts",
+						"net"
+					],
+					"path": [
+						"AssetTracker",
+						"api",
+						"BookCatalogue",
+						"AddBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GenerateToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "GetAssetSyncData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
